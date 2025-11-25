@@ -1,0 +1,46 @@
+# Entry 6 | Splunk Cloud SSH Brute Force Investigation (Buttercup Games)
+
+## Date
+7/20/2025
+
+## Description
+Used Splunk Cloud to investigate potential SSH brute force activity targeting the root account on the Buttercup Games mail server. Uploaded tutorialdata.zip, indexed the logs, and ran searches to identify suspicious authentication failures and patterns of repeated login attempts.
+
+## Tools Used
+- Splunk Cloud  
+- tutorialdata.zip (sample logs)  
+- SPL search queries  
+
+### Search Queries Used
+- index="main"  
+- index=main host=mailsv  
+- index=main host=mailsv fail* root  
+
+## The 5 W's
+
+### Who caused the incident?
+An unknown threat actor attempting to gain SSH access to the root account on the mail server.
+
+### What happened?
+A large amount of failed SSH login attempts targeting `root` were discovered in `/mailsv/secure.log`. Over 300 failed attempts were logged, indicating automated brute force or credential stuffing behavior.
+
+### When did the incident occur?
+Logs contained entries from various times. The investigation took place on 7/20/2025.
+
+### Where did the incident happen?
+On the Buttercup Games mail server (`mailsv`), specifically in the `/mailsv/secure.log` authentication log file.
+
+### Why did the incident happen?
+Attackers were likely scanning for exposed SSH services and attempting to break in using common or default passwords for the `root` account.
+
+## Additional Notes
+- Over 100,000 total log events were indexed in Splunk during analysis.  
+- `host=mailsv` confirmed the source system of the SSH logs.  
+- Searching for patterns like `fail*` and `root` revealed repeated brute force attempts.  
+- More than 100 failures were tied specifically to the root account.  
+
+### Recommended Actions
+- Disable SSH login for the `root` user.  
+- Deploy fail2ban or similar rate limiting controls.  
+- Create Splunk alerts to detect repeated authentication failures.  
+- Enforce stronger SSH key and password policy across the environment.  
