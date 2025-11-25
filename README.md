@@ -1,6 +1,6 @@
 # Incident Handlers Journal
 
-Cybersecurity journal documenting my investigations, SOC style entries, and hands-on analysis across different tools and scenarios.
+Cybersecurity journal documenting my investigations, SOC style entries, and hands-on analysis across different tools and scenarios. This repo grows as I complete new labs, incidents, and training exercises.
 
 ---
 
@@ -25,9 +25,9 @@ Cybersecurity journal documenting my investigations, SOC style entries, and hand
 ## About This Repo
 
 This repo holds my collection of incident handler journal entries.  
-Each entry comes from hands-on labs, simulated alerts, Splunk investigations, Suricata rules, malware checks, phishing analysis, and other cybersecurity exercises.
+Each entry comes from hands-on labs, alert simulations, Splunk analysis, Suricata rules, malware investigations, and general cybersecurity exercises.
 
-I use the same structure in every entry so I can practice thinking and writing like a SOC analyst. This repo is both a learning tool and a growing portfolio of my cybersecurity experience.
+Every entry follows the same structure so I can practice thinking and documenting like a SOC analyst. This journal acts as both a learning tool and a portfolio showcasing the security work I’ve completed.
 
 ---
 
@@ -48,25 +48,25 @@ I use the same structure in every entry so I can practice thinking and writing l
 
 ## Entry Summaries
 
-### Entry 1 – Ransomware at a Hospital  
-A staff member opened a phishing email that deployed ransomware. Covers infection path, impact, and recommendations like better staff training and awareness.
+### [Entry 1 – Ransomware at a Hospital](Entry_1_Ransomware.md)
+A staff member opened a phishing email that deployed ransomware. The entry covers the infection path, early response attempts, and recommendations like better phishing training for employees in high-risk environments.
 
-### Entry 2 – Wireshark Packet Analysis  
-Analyzed a web browsing PCAP. Looked at DNS queries, TCP handshake details, HTTP traffic, ICMP echo requests, and used filters to inspect specific protocol data.
+### [Entry 2 – Wireshark Packet Analysis](Entry_2_Wireshark.md)
+Analyzed a PCAP containing normal web browsing traffic. Looked at DNS requests, TCP handshake details, ICMP echo packets, HTTP traffic, and used multiple filters to isolate useful protocol data.
 
-### Entry 3 – VirusTotal Malicious File Investigation  
-Investigated a suspicious spreadsheet with a hidden malicious payload. Used SHA256 hashing and VirusTotal to confirm malware and record IoCs. Recommended blocking indicators and reimaging the device.
+### [Entry 3 – VirusTotal Malicious File Investigation](Entry_3_VirusTotal.md)
+Investigated a suspicious spreadsheet that contained a hidden malicious payload. Used SHA256 hashing and VirusTotal to confirm malware, identify IoCs, and recommend device reimaging and defensive actions.
 
-### Entry 4 – Forced Browsing Data Breach  
-Reviewed a major data breach caused by insecure URL access on an e-commerce site. Attackers accessed over 50,000 customer records. Includes remediation steps such as URL authentication, IDs, and vulnerability scanning.
+### [Entry 4 – Forced Browsing Data Breach](Entry_4_DataBreach.md)
+Reviewed a large data breach caused by insecure URL access on an e-commerce site. Attackers accessed over 50,000 customer records by changing order numbers in URLs. Includes remediation steps like URL authentication and vulnerability scanning.
 
-### Entry 5 – Suricata Custom Rule Detection  
-Created a custom Suricata rule to detect HTTP GET requests. Validated the rule with sample PCAP data and analyzed alerts in fast.log and eve.json using jq.
+### [Entry 5 – Suricata Custom Rule Detection](Entry_5_Suricata.md)
+Created a custom Suricata rule to detect HTTP GET requests. Validated the rule using a PCAP file and analyzed alerts in both fast.log and eve.json with jq for JSON parsing.
 
-### Entry 6 – Splunk Cloud SSH Attack Analysis  
-Analyzed secure.log data for repeated SSH brute force attempts against the root account on a mail server. Identified attack patterns and recommended SSH hardening.
+### [Entry 6 – Splunk Cloud SSH Attack Analysis](Entry_6_Splunk_Buttercup_Games.md)
+Investigated over 300 failed SSH login attempts targeting the root account on a mail server. Used Splunk Cloud searches to identify patterns and recommended SSH hardening steps.
 
-*(More entries will be added as I complete them.)*
+*(More entries coming soon.)*
 
 ---
 
@@ -88,14 +88,14 @@ Analyzed secure.log data for repeated SSH brute force attempts against the root 
 
 ## Purpose of This Journal
 
-The goal of this journal is to track my progress as I learn cybersecurity.  
-It helps me:
+The goal of this journal is to track my progress as I learn cybersecurity and gain hands-on skills.  
+This documentation helps me practice:
 
-- practice analyzing logs  
-- investigate alerts  
-- understand network traffic  
-- write clear incident reports  
-- build real SOC analyst habits  
+- analyzing logs  
+- investigating alerts  
+- understanding network traffic  
+- writing clear, structured incident reports  
+- thinking like a SOC analyst  
 
-This repo grows as I complete new labs, tools, and investigations.
+New entries will be added as I complete more labs, tools, and investigations.
 
