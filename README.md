@@ -2,10 +2,6 @@
 
 Cybersecurity journal documenting my investigations, SOC style entries, and hands-on analysis across different tools and scenarios. This repo grows as I complete new labs, incidents, and training exercises.
 
----
-
-## Badges
-
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Security](https://img.shields.io/badge/Focus-Cybersecurity-blue)
 ![Learning](https://img.shields.io/badge/Learning-In%20Progress-orange)
